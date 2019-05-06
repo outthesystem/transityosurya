@@ -21,7 +21,7 @@
     </div>
     <script type="text/javascript" src="{{asset('js/instascan.min.js')}}"></script>
     <script type="text/javascript">
-      let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
+      let scanner = new Instascan.Scanner({ video: document.getElementById('preview') ,backgroundScan:true, continuous: true, mirror:false });
       scanner.addListener('scan', function (content) {
         console.log(content);
         window.location.replace("{{url('/result')}}/"+ content +"");
