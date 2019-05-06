@@ -45,7 +45,7 @@
                             <a class="nav-link" href="{{url('/vehicles')}}">Vehiculos</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#">Habilitaciones</a>
+                            <a class="nav-link" href="{{url('/qualifications')}}">Habilitaciones</a>
                           </li>
                       @endguest
                     </ul>
