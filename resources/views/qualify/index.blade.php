@@ -35,7 +35,7 @@
                             <th scope="row">{{$c->id}}</th>
                             <td>{{$c->agency->name}} - {{$c->agency->address}}</td>
                             <td>{{$c->vehicle->brand}} {{$c->vehicle->model}} {{$c->vehicle->year}} {{$c->vehicle->patent}}</td>
-                            <td>{{$c->driver->name}} {{$c->driver->dni}}</td>
+                            <td>{{@$c->driver->name}} {{@$c->driver->dni}}</td>
                             <td>{{$c->credetendialn}}</td>
                             <td>{{$c->name}}</td>
                             <td>{{$c->expiration}}</td>

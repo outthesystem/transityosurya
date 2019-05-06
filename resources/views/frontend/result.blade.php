@@ -37,7 +37,7 @@
                 <b>Vehiculo:</b> {{$qualify->vehicle->brand}} {{$qualify->vehicle->model}} {{$qualify->vehicle->year}} {{$qualify->vehicle->patent}}
               </div>
               <div class="col-sm-6">
-                <b>Conductor:</b> {{$qualify->driver->name}} - {{$qualify->driver->dni}}
+                <b>Conductor:</b> {{@$qualify->driver->name}} - {{@$qualify->driver->dni}}
               </div>
             </div>
             <hr>
