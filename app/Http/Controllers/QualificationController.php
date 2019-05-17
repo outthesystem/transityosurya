@@ -31,11 +31,26 @@ class QualificationController extends Controller
       $qualify->driver_id = $request->driver_id;
       $qualify->credentialn = $request->credentialn;
       $qualify->name = $request->name;
+      $qualify->expedient = $request->expedient;
+      $qualify->ini_date = $request->ini_date;
       $qualify->expiration = $request->expiration;
       $qualify->wafers = $request->wafers;
       $qualify->save();
 
       return redirect('/qualifications')->with('messageToast','Habilitación creada correctamente.');
+    }
+
+    public function show(Qualification $qualify)
+    {
+      return view('qualify.show', compact('qualify'));
+    }
+
+    public function extend(Request $request, Qualification $qualify)
+    {
+      $qualify->expiration = $request->expiration;
+      $qualify->save();
+      return redirect('/home')->with('messageToast','Habilitación extendida correctamente.');
+
     }
 
     public function generateQR(Qualification $qualify)

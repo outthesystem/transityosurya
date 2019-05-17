@@ -20,7 +20,7 @@
           <div class="card-body">
             <center>
               <h3 >
-                {{$qualify->name}}
+                {{@$qualify->name}}
               </h3>
               <hr>
 
@@ -28,13 +28,13 @@
             <br>
             <div class="row mx-auto">
               <div class="col-sm-6">
-                <b>Agencia:</b> {{$qualify->agency->name}} - {{$qualify->agency->address}}
+                <b>Agencia:</b> {{@$qualify->agency->name}} - {{@$qualify->agency->address}}
               </div>
               <div class="col-sm-6">
-                <b>Propietario:</b> {{$qualify->owner->name}} - {{$qualify->owner->dni}}
+                <b>Propietario:</b> {{@$qualify->owner->name}} - {{@$qualify->owner->dni}}
               </div>
               <div class="col-sm-6">
-                <b>Vehiculo:</b> {{$qualify->vehicle->brand}} {{$qualify->vehicle->model}} {{$qualify->vehicle->year}} {{$qualify->vehicle->patent}}
+                <b>Vehiculo:</b> {{@$qualify->vehicle->brand}} {{@$qualify->vehicle->model}} {{@$qualify->vehicle->year}} {{@$qualify->vehicle->patent}}
               </div>
               <div class="col-sm-6">
                 <b>Conductor:</b> {{@$qualify->driver->name}} - {{@$qualify->driver->dni}}
@@ -43,10 +43,10 @@
             <hr>
             <div class="row mx-auto">
                 <div class="col-sm-12">
-                  <b>Numero de Credencial:</b> {{$qualify->credentialn}}
+                  <b>Numero de Credencial:</b> {{@$qualify->credentialn}}
                 </div>
                 <div class="col-sm-12">
-                  <b>Oblea:</b> {{$qualify->wafers}}
+                  <b>Oblea:</b> {{@$qualify->wafers}}
                 </div>
                 <div class="col-sm-12
                 @if (\Carbon\Carbon::parse($qualify->expiration)->lt(\Carbon\Carbon::now()))
@@ -60,7 +60,7 @@
                       @else
                       Al dia
                     @endif
-                    :</b> {{$qualify->expiration}}
+                    :</b> {{@$qualify->expiration}}
                 </div>
             </div>
           </div>

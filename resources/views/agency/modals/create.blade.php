@@ -15,7 +15,7 @@
           </div>
           <div class="form-group">
             <label for="addressInput1">Dirección</label>
-            <input type="text" class="form-control" id="addressInput1" name="address">
+            <input type="text" class="form-control" id="addressInput1" name="address" value="DIRECCION">
           </div>
         </div>
         <div class="modal-footer">

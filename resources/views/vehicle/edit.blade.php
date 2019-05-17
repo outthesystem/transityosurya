@@ -16,14 +16,14 @@
 
                   <div class="card-body">
                     <div class="form-group">
-                      <label for="nameInput1">Selecciona Propietario</label>
-                      <select class="form-control" name="owner_id">
-                        @foreach ($owners as $o)
-                          <option value="{{$o->id}}"
-                            @if ($o->owner_id == $vehicle->owner_id)
+                      <label for="nameInput1">Selecciona Conductor</label>
+                      <select class="form-control" name="driver_id">
+                        @foreach ($drivers as $d)
+                          <option value="{{$d->id}}"
+                            @if ($d->id == $vehicle->driver_id)
                               selected
                             @endif
-                            >{{$o->name}}</option>
+                            >{{$d->name}}</option>
                         @endforeach
                       </select>
                     </div>

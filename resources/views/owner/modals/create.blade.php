@@ -15,11 +15,11 @@
           </div>
           <div class="form-group">
             <label for="addressInput1">DNI</label>
-            <input type="text" class="form-control" id="dniInput1" name="dni">
+            <input type="text" class="form-control" id="dniInput1" name="dni" value="dni">
           </div>
           <div class="form-group">
             <label for="addressInput1">Telefono</label>
-            <input type="number" class="form-control" id="phoneInput1" name="phone">
+            <input type="number" class="form-control" id="phoneInput1" name="phone" value="123">
           </div>
         </div>
         <div class="modal-footer">

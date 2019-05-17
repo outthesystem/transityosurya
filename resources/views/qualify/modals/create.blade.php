@@ -35,12 +35,20 @@
             </select>
           </div>
           <div class="form-group">
+            <label for="expedientInput1">Expediente</label>
+            <input type="text" class="form-control" id="expedientInput1" name="expedient">
+          </div>
+          <div class="form-group">
             <label for="credentialnInput1">Numero de Credencial</label>
             <input type="text" class="form-control" id="credentialnInput1" name="credentialn">
           </div>
           <div class="form-group">
             <label for="nameInput1">Nombre</label>
             <input type="text" class="form-control" id="nameInput1" name="name">
+          </div>
+          <div class="form-group">
+            <label for="ini_dateInput1">Fecha de inicio</label>
+            <input type="date" class="form-control" id="ini_dateInput1" name="ini_date">
           </div>
           <div class="form-group">
             <label for="expirationInput1">Expira el</label>

@@ -22,6 +22,7 @@
                           <th scope="col">Agencia</th>
                           <th scope="col">Vehiculo</th>
                           <th scope="col">Conductor</th>
+                          <th scope="col">Expediente</th>
                           <th scope="col">Numero de Crendecial</th>
                           <th scope="col">Nombre</th>
                           <th scope="col">Expiración</th>
@@ -36,7 +37,8 @@
                             <td>{{$c->agency->name}} - {{$c->agency->address}}</td>
                             <td>{{$c->vehicle->brand}} {{$c->vehicle->model}} {{$c->vehicle->year}} {{$c->vehicle->patent}}</td>
                             <td>{{@$c->driver->name}} {{@$c->driver->dni}}</td>
-                            <td>{{$c->credetendialn}}</td>
+                            <td>{{$c->expedient}}</td>
+                            <td>{{$c->credentialn}}</td>
                             <td>{{$c->name}}</td>
                             <td>{{$c->expiration}}</td>
                             <td>{{$c->wafers}}</td>

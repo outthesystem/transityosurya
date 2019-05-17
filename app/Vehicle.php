@@ -14,8 +14,8 @@ class Vehicle extends Model
     'patent',
   ];
 
-  public function owner()
+  public function driver()
   {
-    return $this->belongsTo('App\Owner');
+    return $this->belongsTo('App\Driver');
   }
 }

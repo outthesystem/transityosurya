@@ -114,7 +114,9 @@
     <script type="text/javascript">
 
       $('#messageToast').toast('show')
-
+      $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
     </script>
   @endif
 

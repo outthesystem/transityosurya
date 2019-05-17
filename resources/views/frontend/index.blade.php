@@ -21,14 +21,14 @@
     </div>
     <script type="text/javascript" src="{{asset('js/instascan.min.js')}}"></script>
     <script type="text/javascript">
-      let scanner = new Instascan.Scanner({ video: document.getElementById('preview') ,backgroundScan:true, continuous: true, mirror:false });
+      let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
       scanner.addListener('scan', function (content) {
         console.log(content);
         window.location.replace("{{url('/result')}}/"+ content +"");
       });
       Instascan.Camera.getCameras().then(function (cameras) {
         if (cameras.length > 0) {
-          scanner.start(cameras[1]);
+          scanner.start(cameras[0]);
         } else {
           console.error('No cameras found.');
         }

@@ -48,6 +48,8 @@ Route::get('/qualifications', 'QualificationController@index');
 Route::post('/qualifications', 'QualificationController@store');
 Route::get('/generateQR/{qualify}', 'QualificationController@generateQR');
 Route::get('/qr/{qualify}', 'QualificationController@showQR');
+Route::get('/qualification/show/{qualify}', 'QualificationController@show');
+Route::post('/extend/{qualify}', 'QualificationController@extend');
 //Route::get('/vehicle/{vehicle}', 'VehicleController@edit');
 //Route::post('/vehicle/{vehicle}', 'VehicleController@update');
 //Route::get('/vehicledelete/{vehicle}', 'VehicleController@destroy');

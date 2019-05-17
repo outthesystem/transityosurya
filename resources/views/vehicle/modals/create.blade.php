@@ -10,24 +10,24 @@
         </div>
         <div class="modal-body">
           <div class="form-group">
-            <label for="nameInput1">Selecciona Propietario</label>
-            <select class="form-control" name="owner_id">
-              @foreach ($owners as $o)
-                <option value="{{$o->id}}">{{$o->name}}</option>
+            <label for="nameInput1">Selecciona Conductor</label>
+            <select class="form-control" name="driver_id">
+              @foreach ($drivers as $d)
+                <option value="{{$d->id}}">{{$d->name}}</option>
               @endforeach
             </select>
           </div>
           <div class="form-group">
             <label for="brandInput1">Marca</label>
-            <input type="text" class="form-control" id="brandInput1" name="brand">
+            <input type="text" class="form-control" id="brandInput1" name="brand" value="marca">
           </div>
           <div class="form-group">
             <label for="modelInput1">Modelo</label>
-            <input type="text" class="form-control" id="modelInput1" name="model">
+            <input type="text" class="form-control" id="modelInput1" name="model" value="modelo">
           </div>
           <div class="form-group">
             <label for="yearInput1">Año</label>
-            <input type="text" class="form-control" id="yearInput1" name="year">
+            <input type="text" class="form-control" id="yearInput1" name="year" value="2019">
           </div>
           <div class="form-group">
             <label for="patentInput1">Patente</label>

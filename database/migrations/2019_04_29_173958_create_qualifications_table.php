@@ -19,8 +19,10 @@ class CreateQualificationsTable extends Migration
             $table->integer('owner_id')->nullable();
             $table->integer('vehicle_id')->nullable();
             $table->integer('driver_id')->nullable();
-            $table->integer('credentialn')->nullable();
+            $table->string('credentialn')->nullable();
+            $table->string('expedient')->nullable();
             $table->string('name')->nullable();
+            $table->date('ini_date')->nullable();
             $table->date('expiration')->nullable();
             $table->string('wafers')->nullable();
             $table->timestamps();

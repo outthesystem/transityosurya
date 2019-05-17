@@ -19,7 +19,7 @@
                       <thead>
                         <tr>
                           <th scope="col">#</th>
-                          <th scope="col">Propietario</th>
+                          <th scope="col">Conductor</th>
                           <th scope="col">Marca</th>
                           <th scope="col">Modelo</th>
                           <th scope="col">Año</th>
@@ -31,7 +31,7 @@
                         @forelse ($vehicles as $v)
                           <tr>
                             <th scope="row">{{$v->id}}</th>
-                            <td>{{$v->owner->name}}</td>
+                            <td>{{@$v->driver->name}}</td>
                             <td>{{$v->brand}}</td>
                             <td>{{$v->model}}</td>
                             <td>{{$v->year}}</td>

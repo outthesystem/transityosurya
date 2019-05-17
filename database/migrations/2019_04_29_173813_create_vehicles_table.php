@@ -15,7 +15,7 @@ class CreateVehiclesTable extends Migration
     {
         Schema::create('vehicles', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('owner_id')->nullable();
+            $table->integer('driver_id')->nullable();
             $table->string('brand')->nullable();
             $table->string('model')->nullable();
             $table->string('year')->nullable();
