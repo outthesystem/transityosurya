@@ -10,6 +10,7 @@ use App\Agency;
 
 class QualificationController extends Controller
 {
+
     public function index()
     {
       $qualifications = Qualification::all();

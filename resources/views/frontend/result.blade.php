@@ -62,6 +62,11 @@
                     @endif
                     :</b> {{@$qualify->expiration}}
                 </div>
+
+            </div>
+            <br>
+            <div class="col-sm-12">
+              <a href="{{url('resultagency/'.$qualify->agency_id)}}" class="btn btn-primary">Ver habilitaciones de esta agencia</a>
             </div>
           </div>
         </div>

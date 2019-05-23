@@ -15,41 +15,49 @@
 Route::get('/', 'FrontendController@index');
 
 Route::get('/result/{qualify}', 'FrontendController@result');
+Route::get('/resultagency/{agency}', 'FrontendController@resultAgency');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/agencies', 'AgencyController@index');
-Route::post('/agencies', 'AgencyController@store');
-Route::get('/agency/{agency}', 'AgencyController@edit');
-Route::post('/agency/{agency}', 'AgencyController@update');
-Route::get('/agencydelete/{agency}', 'AgencyController@destroy');
+Route::group(['middleware' => 'auth'], function()
+{
+    //All the routes that belongs to the group goes here
+    Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/drivers', 'DriverController@index');
-Route::post('/drivers', 'DriverController@store');
-Route::get('/driver/{driver}', 'DriverController@edit');
-Route::post('/driver/{driver}', 'DriverController@update');
-Route::get('/driverdelete/{driver}', 'DriverController@destroy');
+    Route::get('/agencies', 'AgencyController@index');
+    Route::post('/agencies', 'AgencyController@store');
+    Route::get('/agency/{agency}', 'AgencyController@edit');
+    Route::post('/agency/{agency}', 'AgencyController@update');
+    Route::get('/agencydelete/{agency}', 'AgencyController@destroy');
 
-Route::get('/owners', 'OwnerController@index');
-Route::post('/owners', 'OwnerController@store');
-Route::get('/owner/{owner}', 'OwnerController@edit');
-Route::post('/owner/{owner}', 'OwnerController@update');
-Route::get('/ownerdelete/{owner}', 'OwnerController@destroy');
+    Route::get('/drivers', 'DriverController@index');
+    Route::post('/drivers', 'DriverController@store');
+    Route::get('/driver/{driver}', 'DriverController@edit');
+    Route::post('/driver/{driver}', 'DriverController@update');
+    Route::get('/driverdelete/{driver}', 'DriverController@destroy');
 
-Route::get('/vehicles', 'VehicleController@index');
-Route::post('/vehicles', 'VehicleController@store');
-Route::get('/vehicle/{vehicle}', 'VehicleController@edit');
-Route::post('/vehicle/{vehicle}', 'VehicleController@update');
-Route::get('/vehicledelete/{vehicle}', 'VehicleController@destroy');
+    Route::get('/owners', 'OwnerController@index');
+    Route::post('/owners', 'OwnerController@store');
+    Route::get('/owner/{owner}', 'OwnerController@edit');
+    Route::post('/owner/{owner}', 'OwnerController@update');
+    Route::get('/ownerdelete/{owner}', 'OwnerController@destroy');
 
-Route::get('/qualifications', 'QualificationController@index');
-Route::post('/qualifications', 'QualificationController@store');
-Route::get('/generateQR/{qualify}', 'QualificationController@generateQR');
-Route::get('/qr/{qualify}', 'QualificationController@showQR');
-Route::get('/qualification/show/{qualify}', 'QualificationController@show');
-Route::post('/extend/{qualify}', 'QualificationController@extend');
-//Route::get('/vehicle/{vehicle}', 'VehicleController@edit');
-//Route::post('/vehicle/{vehicle}', 'VehicleController@update');
-//Route::get('/vehicledelete/{vehicle}', 'VehicleController@destroy');
+    Route::get('/vehicles', 'VehicleController@index');
+    Route::post('/vehicles', 'VehicleController@store');
+    Route::get('/vehicle/{vehicle}', 'VehicleController@edit');
+    Route::post('/vehicle/{vehicle}', 'VehicleController@update');
+    Route::get('/vehicledelete/{vehicle}', 'VehicleController@destroy');
+
+    Route::get('/qualifications', 'QualificationController@index');
+    Route::post('/qualifications', 'QualificationController@store');
+    Route::get('/generateQR/{qualify}', 'QualificationController@generateQR');
+    Route::get('/qr/{qualify}', 'QualificationController@showQR');
+    Route::get('/qualification/show/{qualify}', 'QualificationController@show');
+    Route::post('/extend/{qualify}', 'QualificationController@extend');
+    //Route::get('/vehicle/{vehicle}', 'VehicleController@edit');
+    //Route::post('/vehicle/{vehicle}', 'VehicleController@update');
+    //Route::get('/vehicledelete/{vehicle}', 'VehicleController@destroy');
+
+
+});

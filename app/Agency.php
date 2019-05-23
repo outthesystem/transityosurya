@@ -10,4 +10,10 @@ class Agency extends Model
       'name',
       'address'
     ];
+
+
+    public function qualifications()
+    {
+      return $this->hasMany('App\Qualification');
+    }
 }

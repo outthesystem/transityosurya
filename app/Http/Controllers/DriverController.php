@@ -7,6 +7,7 @@ use App\Driver;
 
 class DriverController extends Controller
 {
+
     public function index()
     {
       $drivers = Driver::all();
